@@ -1,21 +1,21 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
-import { Image, Text, View, ImageBackground } from "react-native";
-import Card from "../component/Card";
-import { useSelectText } from "../hook/useLang";
-import mobileAppPicture from "../res/mobile-app.jpg"
-import timeBackgroundPicture from "../res/time-background.jpeg"
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import Card from "../../component/Card";
+import { useSelectText } from "../../hook/useLang";
+import timeBackgroundPicture from "./time-background.jpeg";
+// import NotifyMeButton from "./NotifyMeButton"
 
-export default function BuildingResume() {
-	{// refresh each second
-		const [, refresh] = useState<{}>({});
-		useEffect(() => {
-			const id = setInterval(() => refresh({}), 1000);
-			return () => clearInterval(id);
-		}, []);
-	}
+export default function End() {
+	// {// refresh each second
+	// 	const [, refresh] = useState<{}>({});
+	// 	useEffect(() => {
+	// 		const id = setInterval(() => refresh({}), 1000);
+	// 		return () => clearInterval(id);
+	// 	}, []);
+	// }
 
-	const duration = moment.duration(Date.now() - LIVE_SINCE);
+	// const duration = moment.duration(Date.now() - LIVE_SINCE);
 
 	const selectText = useSelectText();
 	return (
@@ -35,16 +35,19 @@ export default function BuildingResume() {
 						fontSize: 20,
 						textAlign: 'center',
 						marginBottom: 50,
+						padding: 20,
 					}}>
 						{
 							selectText({
-								fr: `Le CV est encore en construction\net est en ligne depuis`,
-								en: `The resume is still under construction\nand is live since`,
+								fr: `Le CV est encore en construction`,
+								// + `\net est en ligne depuis`,
+								en: `The resume is still under construction`,
+								// + `\nand is live since`,
 							})
 						}
 					</Text>
 
-					<Text style={{
+					{/* <Text style={{
 						fontSize: 50,
 						color: "white",
 						textAlign: 'center'
@@ -61,15 +64,22 @@ export default function BuildingResume() {
 							})
 								.join(':')
 						}
-					</Text>
+					</Text> */}
 
+
+					{/* <NotifyMeButton style={styles.notifyMe}/> */}
 				</View>
-
-
-
 			</ImageBackground>
 		</Card>
 	);
 }
 
 const LIVE_SINCE = 1652254775405;
+
+const styles = StyleSheet.create({
+	notifyMe: {
+		position: "absolute",
+		bottom: 20,
+		right: 20,
+	}
+});

@@ -9,11 +9,13 @@ export default function Profile() {
 	return (
 		<Card style={styles.card}>
 			<Text style={styles.title}>
-				{selectText({
-					en: "THIS IS THE RESUME OF",
-					fr: "CECI EST LE CV DE",
-				})}
-				
+				{
+					selectText({
+						en: "THIS IS THE RESUME OF",
+						fr: "CECI EST LE CV DE",
+					})
+				}
+
 			</Text>
 
 			<ImageBackground
@@ -31,7 +33,7 @@ export default function Profile() {
 			</Text>
 
 			<Text style={styles.subtitle}>
-				Javascript developer
+				Senior Javascript Developer
 			</Text>
 
 		</Card>
@@ -51,7 +53,8 @@ const styles = StyleSheet.create({
 		overflow: "hidden",
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginBottom: 20
+		marginTop: 70,
+		marginBottom: 40
 	},
 
 	picture: {
@@ -76,9 +79,10 @@ const styles = StyleSheet.create({
 		fontSize: 30,
 		fontWeight: "bold",
 		letterSpacing: 1.2,
+		marginBottom: 10,
 	},
 
 	subtitle: {
-		fontSize: 16
+		fontSize: 16,
 	},
 });

@@ -4,8 +4,9 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Profile from './page/Profile';
 import Story from './page/Story';
 import Page from './component/Page';
-import BuildingResume from './page/BuildingResume';
+import End from './page/End';
 import Skills from './page/Skills';
+import SideProject from './page/SideProject';
 
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
 						Profile,
 						Story,
 						Skills,
-						BuildingResume,
+						SideProject,
+						End,
 					].map((Content, index) =>
-						<Page>
+						<Page key={index}>
 							<Content />
 						</Page>
 					)

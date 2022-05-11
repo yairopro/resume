@@ -1,13 +1,13 @@
 import { Image, Text, View } from "react-native";
-import Card from "../component/Card";
-import { useSelectText } from "../hook/useLang";
-import mobileAppPicture from "../res/mobile-app.jpg"
+import Card from "../../component/Card";
+import { useSelectText } from "../../hook/useLang";
+import shopinzonAppPicture from "./shopinzon-app.jpeg"
 
 export default function Story() {
 	const selectText = useSelectText();
 	return (
 		<Card style={{ overflow: "hidden", flexDirection: "row", padding: 0, flexWrap: "wrap" }}>
-			<Image source={{ uri: mobileAppPicture }} resizeMode="cover" style={{ minWidth: 200, flexGrow: 1, minHeight: 200 }} />
+			<Image source={{ uri: shopinzonAppPicture }} resizeMode="cover" style={{ minWidth: 200, flexGrow: 1, minHeight: 200 }} />
 
 			<View style={{ padding: 20, flexBasis: 200, justifyContent: 'center', flexGrow: 1 }}>
 

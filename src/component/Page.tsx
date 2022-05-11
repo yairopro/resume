@@ -8,6 +8,7 @@ export default function Page({...props}: ViewProps) {
 export const cardStyle: ViewStyle = {
 	alignItems: "center",
 	justifyContent: "center",
-	height: "100vh",
+	minHeight: "100vh",
+	paddingVertical: 20,
 	width: "100%",
 };
