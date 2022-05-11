@@ -11,6 +11,15 @@ export default function Story() {
 
 			<View style={{ padding: 20, flexBasis: 200, justifyContent: 'center', flexGrow: 1 }}>
 
+			<Text style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginVertical: 40, }}>
+					{
+						selectText({
+							en: `My story`,
+							fr: `Mon histoire`,
+						})
+					}
+				</Text>
+
 				<Text style={{ fontSize: 18, letterSpacing: 1.1 }}>
 					{
 						selectText({

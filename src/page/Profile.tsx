@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
 	},
 
 	title: {
-		fontSize: 25,
+		fontSize: 20,
 		letterSpacing: 1.5,
 		position: "absolute",
 		textAlign: "center",
-		top: 20,
+		top: 70,
 		left: 0,
 		right: 0,
 	},
