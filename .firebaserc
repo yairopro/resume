@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "yair-behar"
+  },
+  "targets": {
+    "yair-behar": {
+      "hosting": {
+        "firewings": [
+          "firewings"
+        ]
+      }
+    }
   }
 }

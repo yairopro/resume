@@ -8,15 +8,6 @@ export default function Profile() {
 	const selectText = useSelectText();
 	return (
 		<Card style={styles.card}>
-			<Text style={styles.title}>
-				{
-					selectText({
-						en: "THIS IS THE RESUME OF",
-						fr: "CECI EST LE CV DE",
-					})
-				}
-
-			</Text>
 
 			<ImageBackground
 				source={{ uri: bordersBackground }}
@@ -29,10 +20,6 @@ export default function Profile() {
 			</ImageBackground>
 
 			<Text style={styles.name}>
-				Yair Behar
-			</Text>
-
-			<Text style={styles.subtitle}>
 				Senior Fullstack Developer
 			</Text>
 

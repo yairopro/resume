@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "yarn build && firebase deploy --only hosting"
+    "deploy": "yarn build && firebase deploy --only hosting",
+    "deploy:firewings": "yarn build && firebase deploy --only hosting:firewings"
   },
   "dependencies": {
     "@react-spring/parallax": "^9.4.5",

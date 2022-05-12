@@ -64,10 +64,10 @@ export default function End() {
 						<View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly" }}>
 
 							{
-								[
-									['mailto:', 'yairopro@gmail.com'],
-									['tel:', '+972532724254'],
-								]
+								([
+									// ['mailto:', 'yairopro@gmail.com'],
+									// ['tel:', '+972532724254'],
+								] as [string, string][])
 									.map(([prefix, contact]) =>
 										<Text
 											accessibilityRole="link"
