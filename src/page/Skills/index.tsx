@@ -1,4 +1,4 @@
-import { Image, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import Card from "../../component/Card";
 import { useSelectText } from "../../hook/useLang";
 
@@ -110,30 +110,43 @@ export default function Skills() {
 							)
 						}
 					</View> : (
-						<Text
+						<Pressable
 							onPress={() => setShowMore(true)}
 							style={{
-								textAlign: "center",
-								paddingVertical: 20,
-								color: "green",
-								fontSize: 18,
+								borderWidth: 1,
+								borderRadius: 10,
+								alignItems: "center",
+								justifyContent: "center",
+								borderColor: "#e79011",
+								alignSelf: "center",
+								paddingHorizontal: 25,
+								marginVertical: 10,
 							}}>
-							<Text style={{ fontWeight: "bold" }}>
+							<Text
+								style={{
+									textAlign: "center",
+									paddingVertical: 10,
+									color: "#e79011",
+									fontSize: 18,
+								}}>
+								<Text style={{ fontWeight: "bold" }}>
+									{
+										selectText({
+											en: "Show more",
+											fr: "Afficher plus",
+										})
+									}
+								</Text>
+								{'\n'}
 								{
 									selectText({
-										en: "Show more",
-										fr: "Afficher plus",
+										en: " (with less experience)",
+										fr: " (moins d'expérience)",
 									})
 								}
 							</Text>
+						</Pressable>
 
-							{
-								selectText({
-									en: " (with less experience) ⬇",
-									fr: " (moins d'expérience) ⬇",
-								})
-							}
-						</Text>
 					)
 			}
 		</Card>
