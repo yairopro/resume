@@ -80,9 +80,11 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		letterSpacing: 1.2,
 		marginBottom: 10,
+		textAlign: "center",
 	},
 
 	subtitle: {
 		fontSize: 16,
+		textAlign: "center",
 	},
 });
