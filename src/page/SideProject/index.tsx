@@ -1,7 +1,7 @@
 import { Image, Text, View } from "react-native";
 import Card from "../../component/Card";
 import { useSelectText } from "../../hook/useLang";
-import cryptocurrenciesPicture from "./cryptocurrencies.png"
+import cryptocurrenciesPicture from "./cryptocurrencies.jpeg"
 
 export default function SideProject() {
 	const selectText = useSelectText();

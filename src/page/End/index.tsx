@@ -34,14 +34,13 @@ export default function End() {
 						color: "white",
 						fontSize: 20,
 						textAlign: 'center',
-						marginBottom: 50,
 						padding: 20,
 					}}>
 						{
 							selectText({
-								fr: `Le CV est encore en construction`,
+								fr: `Ce CV est encore en construction...`,
 								// + `\net est en ligne depuis`,
-								en: `The resume is still under construction`,
+								en: `This resume is still under construction...`,
 								// + `\nand is live since`,
 							})
 						}

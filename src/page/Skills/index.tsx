@@ -129,21 +129,14 @@ export default function Skills() {
 									color: "#e79011",
 									fontSize: 18,
 								}}>
-								<Text style={{ fontWeight: "bold" }}>
+								<Text >
 									{
 										selectText({
-											en: "Show more",
-											fr: "Afficher plus",
+											en: "Show soft skills too",
+											fr: "Vois les plus flexibles",
 										})
 									}
 								</Text>
-								{'\n'}
-								{
-									selectText({
-										en: " (with less experience)",
-										fr: " (moins d'expérience)",
-									})
-								}
 							</Text>
 						</Pressable>
 
