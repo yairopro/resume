@@ -8,12 +8,12 @@ export default function SideProject() {
 	return (
 		<Card style={{ overflow: "hidden", flexDirection: "row", padding: 0, flexWrap: "wrap-reverse" }}>
 
-			<View style={{ padding: 20, flexBasis: 200, flexGrow: 1, justifyContent: "center" }}>
-			<Text style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginVertical: 40, }}>
+			<View style={{ padding: 20, flexBasis: 200, flexGrow: 1, justifyContent: "space-evenly" }}>
+			<Text style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 30, }}>
 					{
 						selectText({
-							en: `Side project in my spare time`,
-							fr: `Projet en libre-temps`,
+							en: `In my spare time`,
+							fr: `Dans mes temps libre`,
 						})
 					}
 				</Text>
@@ -21,10 +21,12 @@ export default function SideProject() {
 				<Text style={{ fontSize: 18, letterSpacing: 1.1 }}>
 					{
 						selectText({
-							en: `Being fascinated by cryptocurrencies, I started to learn about it and the blockchain technology.`
-								+ '\n\n' + `Step by step, my knowledge has grown and I've started to develop a project about it on my spare time.`,
-							fr: `Étant fasciné par les crypto-monnaies, j'ai commencé à m'y intéresser ainsi qu'à la technologie blockchain.`
-								+ '\n\n' + `Pas à pas, mes connaissances ont grandi et j'ai commencé à développer un projet à ce sujet dans mes temps libre.`
+							en: `I mainly use my spare time to create side projects and participate to open-sources.`
+								+ '\n\n' + `The main side project I am working on is a cryptocurrency copy-trader bot.`
+								+ '\n\n' + `But I have other projects and open-source libraries I'm invested in.`,
+							fr: `J'occupe principalement mes temps libre à créer des projets et à participer à des open-sources.`
+							+ `\n\n` + `Le projet principal sur lequel je travaille actuellement est un robot de copy-trading avec les crypto-monnaies.`
+							+ '\n\n' + `Il y a aussi d'autre projets et bibliothèques open-source dont je m'investis.`,
 						})
 					}
 				</Text>
