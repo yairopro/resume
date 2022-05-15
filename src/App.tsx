@@ -8,7 +8,6 @@ import SideProject from './page/SideProject';
 import Skills from './page/Skills';
 import Story from './page/Story';
 
-
 function App() {
 	const [lang, setLang] = useState<Lang>(selectDefaultLang);
 	return (

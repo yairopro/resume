@@ -33,7 +33,7 @@ export default function Profile() {
 			</Text>
 
 			<Text style={styles.subtitle}>
-				Senior Javascript Developer
+				Senior Fullstack Developer
 			</Text>
 
 		</Card>

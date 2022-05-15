@@ -38,9 +38,9 @@ export default function End() {
 					}}>
 						{
 							selectText({
-								fr: `Ce CV est encore en construction...`,
+								fr: `Ce CV est encore en construction. Revenez plus tard pour en voir plus...`,
 								// + `\net est en ligne depuis`,
-								en: `This resume is still under construction...`,
+								en: `This resume is still under construction. Come back later to see more...`,
 								// + `\nand is live since`,
 							})
 						}
