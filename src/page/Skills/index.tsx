@@ -24,8 +24,8 @@ export default function Skills() {
 			<Text style={{ fontSize: 25, letterSpacing: 1.1, textAlign: "center", marginBottom: 30, fontWeight: "bold" }}>
 				{
 					selectText({
-						en: `Technologies I'm used to`,
-						fr: `Les technologies que je manipule`,
+						en: `My skills`,
+						fr: `Mes compétences`,
 					})
 				}
 			</Text>
