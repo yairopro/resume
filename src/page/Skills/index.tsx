@@ -132,8 +132,8 @@ export default function Skills() {
 								<Text >
 									{
 										selectText({
-											en: "Show soft skills too",
-											fr: "Vois les plus flexibles",
+											en: "Show more",
+											fr: "Voir plus",
 										})
 									}
 								</Text>

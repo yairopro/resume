@@ -13,7 +13,7 @@ export function useSelectText() {
 	};
 }
 
-const allLangs = ["en", "fr"/*, 'he'*/] as const;
-export const langs = allLangs as readonly string[];
+export const typedLangs = ["en", "fr"/*, 'he'*/] as const;
+export const langs = typedLangs as readonly string[];
 
-export type Lang = typeof allLangs[number];
+export type Lang = typeof typedLangs[number];

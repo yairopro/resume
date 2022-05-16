@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^9.4.5",
+    "add": "^2.0.6",
     "firebase": "^9.8.1",
     "moment": "^2.29.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-native-web": "^0.17.7"
+    "react-native-web": "^0.17.7",
+    "yarn": "^1.22.18"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

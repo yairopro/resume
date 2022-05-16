@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import Page from './component/Page';
+import LangSelector from './component/LangSelector';
 import { Lang, langs, LanguageContext } from './hook/useLang';
 import End from './page/End';
 import Profile from './page/Profile';
@@ -13,6 +14,9 @@ function App() {
 	return (
 		<LanguageContext.Provider value={lang}>
 			<>
+				<View style={styles.appbar}>
+					<LangSelector value={lang} onValueChange={setLang} />
+				</View>
 				<ScrollView
 					style={{ flex: 1 }}>
 					{
@@ -49,6 +53,14 @@ function selectDefaultLang(): Lang {
 }
 
 const styles = {
+	appbar: {
+		flexDirection: "row",
+		justifyContent: "flex-end",
+		position: "absolute",
+		top: 0,
+		left: 0,
+		right: 0,
+		zIndex: 1,
+	},
 
-
-};
+} as const;

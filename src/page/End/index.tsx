@@ -1,6 +1,6 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, Linking, StyleSheet, Text, View } from "react-native";
 import Card from "../../component/Card";
 import { useSelectText } from "../../hook/useLang";
 import timeBackgroundPicture from "./time-background.jpeg";
@@ -27,7 +27,7 @@ export default function End() {
 				<View style={{
 					backgroundColor: "rgba(0,0,0,0.5)",
 					alignItems: 'center',
-					justifyContent: 'center',
+					justifyContent: 'space-evenly',
 					flexGrow: 1,
 				}}>
 					<Text style={{
@@ -45,6 +45,52 @@ export default function End() {
 							})
 						}
 					</Text>
+
+					<View style={{ alignSelf: 'stretch' }}>
+						<Text style={{
+							color: "white",
+							fontSize: 20,
+							textAlign: 'center',
+							padding: 20,
+						}}>
+							{
+								selectText({
+									fr: `Vous pouvez déjâ me contacter pour un travail.`,
+									en: `You can still contact me for a job.`,
+								})
+							}
+						</Text>
+
+						<View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+
+							{
+								[
+									['mailto:', 'yairopro@gmail.com'],
+									['tel:', '+972532724254'],
+								]
+									.map(([prefix, contact]) =>
+										<Text
+											accessibilityRole="link"
+											// @ts-ignore
+											href={prefix + contact}
+											onClick={(event: Event) => {
+												event.preventDefault();
+												window.open(prefix + contact);
+											}}
+											style={{
+												color: "white",
+												fontSize: 20,
+												textAlign: 'center',
+												fontWeight: "bold",
+												flexBasis: 150,
+												padding: 5,
+											}}>
+											{contact}
+										</Text>
+									)
+							}
+						</View>
+					</View>
 
 					{/* <Text style={{
 						fontSize: 50,
