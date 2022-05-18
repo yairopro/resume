@@ -15,20 +15,21 @@ import rxjsPNG from "./rxjs.png"
 import puppeteerPNG from "./puppeteer.png"
 import ethereumPNG from "./ethereum.png"
 import { useState } from "react";
+import AppText from "../../component/Text";
 
 export default function Skills() {
 	const [showMore, setShowMore] = useState<boolean>(false);
 	const selectText = useSelectText();
 	return (
 		<Card style={{ justifyContent: 'space-evenly', paddingTop: 40 }}>
-			<Text style={{ fontSize: 25, letterSpacing: 1.1, textAlign: "center", marginBottom: 30, fontWeight: "bold" }}>
+			<AppText style={{ fontSize: 25, letterSpacing: 1.1, textAlign: "center", marginBottom: 30, fontWeight: "bold" }}>
 				{
 					selectText({
 						en: `My skills`,
 						fr: `Mes compétences`,
 					})
 				}
-			</Text>
+			</AppText>
 
 			<View style={{ flexDirection: "row", flexWrap: "wrap" }}>
 				{
@@ -117,27 +118,24 @@ export default function Skills() {
 								borderRadius: 10,
 								alignItems: "center",
 								justifyContent: "center",
-								borderColor: "#e79011",
+								borderColor: "white",
 								alignSelf: "center",
 								paddingHorizontal: 25,
 								marginVertical: 10,
 							}}>
-							<Text
+							<AppText
 								style={{
 									textAlign: "center",
 									paddingVertical: 10,
-									color: "#e79011",
 									fontSize: 18,
 								}}>
-								<Text >
 									{
 										selectText({
 											en: "Show more",
 											fr: "Voir plus",
 										})
 									}
-								</Text>
-							</Text>
+							</AppText>
 						</Pressable>
 
 					)
@@ -154,9 +152,9 @@ function TechRow({ tech }: { tech: Tech }) {
 			<Image source={{ uri: tech.logo }}
 				resizeMode="contain"
 				style={{ width: 50, height: 50, margin: 20 }} />
-			<Text style={{ fontSize: 18, letterSpacing: 1.1, color: tech.color, fontWeight: "bold" }}>
+			<AppText style={{ fontSize: 18, letterSpacing: 1.1, color: tech.color, fontWeight: "bold" }}>
 				{tech.name}
-			</Text>
+			</AppText>
 		</View>
 	);
 }

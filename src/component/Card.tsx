@@ -6,18 +6,17 @@ export default function Card({...props}: ViewProps) {
 }
 
 export const cardStyle: ViewStyle = {
-	backgroundColor: "white",
+	backgroundColor: "rgba(0, 0, 0, 0.4)",
+	borderWidth: 1.5,
+	borderColor: "#505050",
+	// @ts-ignore
+	"backdrop-filter": "blur(5px)",
 	borderRadius: 12,
 	minHeight: 500,
 	width: "90vw",
 	maxWidth: 700,
 	alignSelf: "center",
 	padding: 20,
-	shadowColor: "black",
-	shadowOffset: {
-		width: 0,
-		height: 5,
-	},
 	shadowRadius: 10,
 	shadowOpacity: .4,
 };

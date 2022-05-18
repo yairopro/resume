@@ -1,14 +1,15 @@
 import { Image, StyleSheet, ImageBackground, Text } from "react-native";
-import Card from "../component/Card";
-import profilePicture from '../res/profile-picture.jpeg'
-import bordersBackground from '../res/gradient-borders.png'
-import { useSelectText } from "../hook/useLang";
+import Card from "../../component/Card";
+import picturePNG from './picture.png'
+import bordersBackground from '../../res/gradient-borders.png'
+import { useSelectText } from "../../hook/useLang";
+import AppText from "../../component/Text";
 
 export default function Profile() {
 	const selectText = useSelectText();
 	return (
 		<Card style={styles.card}>
-			<Text style={styles.title}>
+			<AppText style={styles.title}>
 				{
 					selectText({
 						en: "THIS IS THE RESUME OF",
@@ -16,25 +17,20 @@ export default function Profile() {
 					})
 				}
 
-			</Text>
+			</AppText>
 
-			<ImageBackground
-				source={{ uri: bordersBackground }}
-				resizeMode="cover"
-				style={styles.pictureBackground}>
 				<Image
-					source={{ uri: profilePicture }}
+					source={{ uri: picturePNG }}
 					resizeMode="cover"
 					style={styles.picture} />
-			</ImageBackground>
 
-			<Text style={styles.name}>
+			<AppText style={styles.name}>
 				Yair Behar
-			</Text>
+			</AppText>
 
-			<Text style={styles.subtitle}>
+			<AppText style={styles.subtitle}>
 				Senior Fullstack Developer
-			</Text>
+			</AppText>
 
 		</Card>
 	);
@@ -46,23 +42,11 @@ const styles = StyleSheet.create({
 		justifyContent: "center"
 	},
 
-	pictureBackground: {
+	picture: {
 		height: 150,
 		width: 150,
-		borderRadius: 75,
-		overflow: "hidden",
-		alignItems: 'center',
-		justifyContent: 'center',
 		marginTop: 70,
-		marginBottom: 40
-	},
-
-	picture: {
-		height: 145,
-		width: 145,
-		borderRadius: 145 / 2,
-		borderWidth: 5,
-		borderColor: "white",
+		marginBottom: 40,
 	},
 
 	title: {

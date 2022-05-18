@@ -24,9 +24,14 @@ body, #root, .view {
     z-index: 0;
 }
 
+#solar-system {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
 
 #root {
-	flex: 1;
-	background-color: #4158D0;
-	background-image: linear-gradient(43deg, #4158D0 0%, #d16b3c 100%);
+	/* background-color: #4158D0;
+	background-image: linear-gradient(43deg, #d16b3c 0%, #4158D0 100%); */
 }

@@ -1,5 +1,6 @@
 import { Image, Text, View } from "react-native";
 import Card from "../../component/Card";
+import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
 import cryptocurrenciesPicture from "./cryptocurrencies.jpeg"
 
@@ -9,16 +10,16 @@ export default function SideProject() {
 		<Card style={{ overflow: "hidden", flexDirection: "row", padding: 0, flexWrap: "wrap-reverse" }}>
 
 			<View style={{ padding: 20, flexBasis: 200, flexGrow: 1, justifyContent: "space-evenly" }}>
-			<Text style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 30, }}>
+			<AppText style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 30, }}>
 					{
 						selectText({
 							en: `In my spare time`,
 							fr: `Dans mes temps libre`,
 						})
 					}
-				</Text>
+				</AppText>
 
-				<Text style={{ fontSize: 18, letterSpacing: 1.1 }}>
+				<AppText style={{ fontSize: 18, letterSpacing: 1.1 }}>
 					{
 						selectText({
 							en: `I mainly use my spare time to create side projects and participate to open-sources.`
@@ -29,7 +30,7 @@ export default function SideProject() {
 							+ '\n\n' + `Il y a aussi d'autre projets et bibliothèques open-source dont je m'investis.`,
 						})
 					}
-				</Text>
+				</AppText>
 			</View>
 
 			<Image source={{ uri: cryptocurrenciesPicture }} resizeMode="cover" style={{ minWidth: 200, flexGrow: 1, minHeight: 200 }} />

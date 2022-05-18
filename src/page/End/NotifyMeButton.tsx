@@ -3,6 +3,7 @@ import { useSelectText } from "../../hook/useLang";
 import { getApp } from "firebase/app"
 import { getMessaging, getToken, isSupported, } from "firebase/messaging"
 import { useEffect, useState } from "react";
+import AppText from "../../component/Text";
 
 
 export default function NotifyMeButton({ ...props }: PressableProps) {
@@ -20,14 +21,14 @@ export default function NotifyMeButton({ ...props }: PressableProps) {
 		<Pressable {...props}>
 			{GRADIENT_BACKGROUND}
 
-			<Text style={styles.text}>
+			<AppText style={styles.text}>
 				{
 					selectText({
 						en: "Notify me on updates",
 						fr: "Me notifier des changements",
 					})
 				}
-			</Text>
+			</AppText>
 		</Pressable>
 	);
 }

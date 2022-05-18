@@ -1,5 +1,6 @@
 import { Image, Text, View } from "react-native";
 import Card from "../../component/Card";
+import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
 import shopinzonAppPicture from "./shopinzon-app.jpeg"
 
@@ -11,16 +12,16 @@ export default function Story() {
 
 			<View style={{ padding: 20, flexBasis: 200, justifyContent: 'space-evenly', flexGrow: 1 }}>
 
-				<Text style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 30}}>
+				<AppText style={{ fontSize: 20, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 30}}>
 					{
 						selectText({
 							en: `My curriculum`,
 							fr: `Mon cursus`,
 						})
 					}
-				</Text>
+				</AppText>
 
-				<Text style={{ fontSize: 18, letterSpacing: 1.1 }}>
+				<AppText style={{ fontSize: 18, letterSpacing: 1.1 }}>
 					{
 						selectText({
 							en: `From 2015 to 2022, I was part of a team in a startup called Shopinzon. Its purpose is to gather local shops, with their products and services, into a marketplace.`
@@ -31,7 +32,7 @@ export default function Story() {
 								+ `\n\nLe projet comprenait 2 applications mobiles (iOS et Android chacune), 4 sites web et une multitude de micro services.`
 						})
 					}
-				</Text>
+				</AppText>
 			</View>
 		</Card>
 	);

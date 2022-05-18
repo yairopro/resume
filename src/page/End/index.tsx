@@ -2,6 +2,7 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 import { ImageBackground, Linking, StyleSheet, Text, View } from "react-native";
 import Card from "../../component/Card";
+import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
 import timeBackgroundPicture from "./time-background.jpeg";
 // import NotifyMeButton from "./NotifyMeButton"
@@ -30,7 +31,7 @@ export default function End() {
 					justifyContent: 'space-evenly',
 					flexGrow: 1,
 				}}>
-					<Text style={{
+					<AppText style={{
 						color: "white",
 						fontSize: 20,
 						textAlign: 'center',
@@ -38,16 +39,16 @@ export default function End() {
 					}}>
 						{
 							selectText({
-								fr: `Ce CV est encore en construction. Revenez plus tard pour en voir plus...`,
+								fr: `Ce CV va s'améliorer avec le temps (jusqu'à ce que je décroche un poste), donc revenez plus tard pour en voir plus...`,
 								// + `\net est en ligne depuis`,
-								en: `This resume is still under construction. Come back later to see more...`,
+								en: `This resume will improve over time (until I finally get a job), so come back later to see more...`,
 								// + `\nand is live since`,
 							})
 						}
-					</Text>
+					</AppText>
 
 					<View style={{ alignSelf: 'stretch' }}>
-						<Text style={{
+						<AppText style={{
 							color: "white",
 							fontSize: 20,
 							textAlign: 'center',
@@ -59,7 +60,7 @@ export default function End() {
 									en: `You can still contact me for a job.`,
 								})
 							}
-						</Text>
+						</AppText>
 
 						<View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly" }}>
 
@@ -69,7 +70,7 @@ export default function End() {
 									['tel:', '+972532724254'],
 								]
 									.map(([prefix, contact]) =>
-										<Text
+										<AppText
 											accessibilityRole="link"
 											// @ts-ignore
 											href={prefix + contact}
@@ -86,13 +87,13 @@ export default function End() {
 												padding: 5,
 											}}>
 											{contact}
-										</Text>
+										</AppText>
 									)
 							}
 						</View>
 					</View>
 
-					{/* <Text style={{
+					{/* <AppText style={{
 						fontSize: 50,
 						color: "white",
 						textAlign: 'center'
@@ -109,7 +110,7 @@ export default function End() {
 							})
 								.join(':')
 						}
-					</Text> */}
+					</AppText> */}
 
 
 					{/* <NotifyMeButton style={styles.notifyMe}/> */}

@@ -14,25 +14,24 @@ function App() {
 	return (
 		<LanguageContext.Provider value={lang}>
 			<>
+				{/* @ts-ignore */}
 				<View style={styles.appbar}>
 					<LangSelector value={lang} onValueChange={setLang} />
 				</View>
-				<ScrollView
-					style={{ flex: 1 }}>
-					{
-						[
-							Profile,
-							Story,
-							Skills,
-							SideProject,
-							End,
-						].map((Content, index) =>
-							<Page key={index}>
-								<Content />
-							</Page>
-						)
-					}
-				</ScrollView>
+				
+				{
+					[
+						Profile,
+						Story,
+						Skills,
+						SideProject,
+						End,
+					].map((Content, index) =>
+						<Page key={index}>
+							<Content />
+						</Page>
+					)
+				}
 			</>
 		</LanguageContext.Provider>
 	);
@@ -56,7 +55,7 @@ const styles = {
 	appbar: {
 		flexDirection: "row",
 		justifyContent: "flex-end",
-		position: "absolute",
+		position: "fixed",
 		top: 0,
 		left: 0,
 		right: 0,
