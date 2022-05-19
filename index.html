@@ -6,11 +6,16 @@
 	<link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Yair Behar</title>
+	<style>
+		.invisible {
+			opacity: 0;
+		}
+	</style>
 </head>
 
 <body>
 	<canvas id="solar-system"></canvas>
-	<div id="root"></div>
+	<div id="root" class="invisible"></div>
 	<script type="module" src="/src/main.tsx"></script>
 </body>
 

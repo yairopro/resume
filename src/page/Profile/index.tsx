@@ -19,10 +19,10 @@ export default function Profile() {
 
 			</AppText>
 
-				<Image
-					source={{ uri: picturePNG }}
-					resizeMode="cover"
-					style={styles.picture} />
+			<Image
+				source={{ uri: picturePNG }}
+				resizeMode="cover"
+				style={styles.picture} />
 
 			<AppText style={styles.name}>
 				Yair Behar
@@ -39,7 +39,8 @@ export default function Profile() {
 const styles = StyleSheet.create({
 	card: {
 		alignItems: "center",
-		justifyContent: "center"
+		justifyContent: "center",
+		backgroundColor: "rgba(0, 0, 0, 0.2)",
 	},
 
 	picture: {

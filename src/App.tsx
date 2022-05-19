@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ScrollView, View } from "react-native";
 import Page from './component/Page';
 import LangSelector from './component/LangSelector';
@@ -8,8 +8,17 @@ import Profile from './page/Profile';
 import SideProject from './page/SideProject';
 import Skills from './page/Skills';
 import Story from './page/Story';
+import AppText from './component/Text';
+import ScrollDownIndicator from './component/ScrollDownIndicator';
 
 function App() {
+	useEffect(() => {
+		setTimeout(() => {
+			const root = document.getElementById("root");
+			root?.classList.remove('invisible');
+		}, 2000);
+	}, []);
+
 	const [lang, setLang] = useState<Lang>(selectDefaultLang);
 	return (
 		<LanguageContext.Provider value={lang}>
@@ -18,7 +27,7 @@ function App() {
 				<View style={styles.appbar}>
 					<LangSelector value={lang} onValueChange={setLang} />
 				</View>
-				
+
 				{
 					[
 						Profile,
@@ -29,6 +38,11 @@ function App() {
 					].map((Content, index) =>
 						<Page key={index}>
 							<Content />
+
+							{
+								!index &&
+								<ScrollDownIndicator />
+							}
 						</Page>
 					)
 				}
