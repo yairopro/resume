@@ -17,7 +17,7 @@ const far = 1000;
 
 //camera
 camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 70;
+camera.position.z = 55;
 camera.position.x = 0;
 scene.add(camera);
 
@@ -40,7 +40,7 @@ const bloomPass = new UnrealBloomPass(
   0.85
 );
 bloomPass.threshold = 0;
-bloomPass.strength = .7; //intensity of glow
+bloomPass.strength = 2; //intensity of glow
 bloomPass.radius = 0;
 const bloomComposer = new EffectComposer(renderer);
 bloomComposer.setSize(window.innerWidth, window.innerHeight);

@@ -6,7 +6,7 @@ export default function Card({...props}: ViewProps) {
 }
 
 export const cardStyle: ViewStyle = {
-	backgroundColor: "rgba(0, 0, 0, 0.4)",
+	backgroundColor: "rgba(0, 0, 0, 0.2)",
 	borderWidth: 1.5,
 	borderColor: "#505050",
 	// @ts-ignore
