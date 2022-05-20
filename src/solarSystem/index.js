@@ -91,12 +91,12 @@ window.addEventListener(
 );
 
 //animation loop
-const animate = () => {
+const animate = (ms) => {
   requestAnimationFrame(animate);
   starMesh.rotation.y += 0.001;
   circles.forEach((circle, i) => {
-	  circle.rotation.y += 0.005 * (i + 1) * (i % 2 === 0 ? 1 : -1);
-	  circle.rotation.x += 0.007 * (i + 1) * (i % 2 === 0 ? 1 : -1);
+	  circle.rotation.y = (ms / 1000) + 0.3 * (i + 1) * (i % 2 === 0 ? 1 : -1);
+	  circle.rotation.x = (ms / 1000) + 0.7 * (i + 1) * (i % 2 === 0 ? 1 : -1);
   });
 
   camera.layers.set(1);

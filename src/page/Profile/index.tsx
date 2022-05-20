@@ -1,9 +1,8 @@
-import { Image, StyleSheet, ImageBackground, Text } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import Card from "../../component/Card";
-import picturePNG from './picture.png'
-import bordersBackground from '../../res/gradient-borders.png'
-import { useSelectText } from "../../hook/useLang";
 import AppText from "../../component/Text";
+import { useSelectText } from "../../hook/useLang";
+import picturePNG from './picture.png';
 
 export default function Profile() {
 	const selectText = useSelectText();
