@@ -71,6 +71,7 @@ export default function End() {
 								]
 									.map(([prefix, contact]) =>
 										<AppText
+											key={contact}
 											accessibilityRole="link"
 											// @ts-ignore
 											href={prefix + contact}

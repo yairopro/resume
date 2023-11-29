@@ -10,7 +10,7 @@ export const cardStyle: ViewStyle = {
 	borderWidth: 1.5,
 	borderColor: "#505050",
 	// @ts-ignore
-	"backdrop-filter": "blur(5px)",
+	backdropFilter: "blur(5px)",
 	borderRadius: 12,
 	minHeight: 500,
 	width: "90vw",

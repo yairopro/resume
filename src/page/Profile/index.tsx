@@ -41,7 +41,7 @@ export default function Profile() {
 						[stackoverflowIcon, "https://stackoverflow.com/users/4170935/yairopro"],
 						[linkedinIcon, "https://www.linkedin.com/in/yair-behar-19b75367"],
 					].map(([uri, url]) =>
-						<a href={url} target="_blank">
+						<a key={url} href={url} target="_blank">
 							<Image
 								source={{ uri }}
 								resizeMode="contain"
