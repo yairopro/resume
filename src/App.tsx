@@ -10,6 +10,7 @@ import Skills from './page/Skills';
 import Story from './page/Story';
 import AppText from './component/Text';
 import ScrollDownIndicator from './component/ScrollDownIndicator';
+import OpenSources from './page/OpenSources';
 
 function App() {
 	useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
 						Profile,
 						Story,
 						Skills,
+						// OpenSources,
 						SideProject,
 						End,
 					].map((Content, index) =>

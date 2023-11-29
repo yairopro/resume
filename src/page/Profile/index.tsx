@@ -1,8 +1,11 @@
-import { Image, StyleSheet } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import Card from "../../component/Card";
 import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
 import picturePNG from './picture.png';
+import githubIcon from './github.svg'
+import stackoverflowIcon from './stackoverflow.svg'
+import linkedinIcon from './linkedin.svg'
 
 export default function Profile() {
 	const selectText = useSelectText();
@@ -31,6 +34,22 @@ export default function Profile() {
 				Senior Fullstack Developer
 			</AppText>
 
+			<View style={styles.iconsRow}>
+				{
+					[
+						[githubIcon, "https://github.com/yairopro"],
+						[stackoverflowIcon, "https://stackoverflow.com/users/4170935/yairopro"],
+						[linkedinIcon, "https://www.linkedin.com/in/yair-behar-19b75367"],
+					].map(([uri, url]) =>
+						<a href={url} target="_blank">
+							<Image
+								source={{ uri }}
+								resizeMode="contain"
+								style={styles.icon} />
+						</a>
+					)
+				}
+			</View>
 		</Card>
 	);
 }
@@ -70,5 +89,20 @@ const styles = StyleSheet.create({
 	subtitle: {
 		fontSize: 16,
 		textAlign: "center",
+	},
+
+	iconsRow: {
+		position: "absolute",
+		bottom: 0,
+		left: 0,
+		flexDirection: "row",
+		padding: 10,
+		gap: 10,
+	},
+
+	icon: {
+		height: 25,
+		width: 25,
+		opacity: .6,
 	},
 });

@@ -44,17 +44,17 @@ const styles = {
 	layout: {
 		alignItems: 'center',
 		position: "absolute",
-		bottom: 20,
+		bottom: 10,
 		left: 0,
 		right: 0,
 	},
 
 	text: {
 		textAlign: "center",
-		marginBottom: 15
+		marginBottom: 3
 	},
 
 	icon: {
-		fontSize: 30,
+		fontSize: 25,
 	}
 } as const;
