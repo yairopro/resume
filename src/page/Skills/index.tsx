@@ -1,21 +1,20 @@
-import { Image, Pressable, Text, View } from "react-native";
-import Card from "../../component/Card";
-import { useSelectText } from "../../hook/useLang";
-
-import firebasePNG from "./firebase.png"
-import graphqlPNG from "./graphql.png"
-import hasuraPNG from "./hasura.png"
-import nodeJSPNG from "./node.png"
-import reactPNG from "./react.png"
-import typescriptPNG from "./typescript.png"
-import postgrePNG from "./postgre.png"
-import stripePNG from "./stripe.png"
-import pdfPNG from "./pdf.png"
-import rxjsPNG from "./rxjs.png"
-import puppeteerPNG from "./puppeteer.png"
-import ethereumPNG from "./ethereum.png"
 import { useState } from "react";
+import { Image, Pressable, View } from "react-native";
+import Card from "../../component/Card";
 import AppText from "../../component/Text";
+import { useSelectText } from "../../hook/useLang";
+import apolloPNG from "./apollo.png";
+import ethereumPNG from "./ethereum.png";
+import firebasePNG from "./firebase.png";
+import graphqlPNG from "./graphql.png";
+import hasuraPNG from "./hasura.png";
+import nodeJSPNG from "./node.png";
+import pdfIcon from "./pdf.svg";
+import postgrePNG from "./postgre.png";
+import puppeteerPNG from "./puppeteer.png";
+import reactPNG from "./react.png";
+import stripePNG from "./stripe.png";
+import typescriptPNG from "./typescript.png";
 
 export default function Skills() {
 	const [showMore, setShowMore] = useState<boolean>(false);
@@ -36,34 +35,46 @@ export default function Skills() {
 					mapToTechRows(
 						[
 							{
-								logo: firebasePNG,
-								name: "Firebase",
-								color: "#FFA000",
-							},
-							{
-								logo: graphqlPNG,
-								name: "GraphQL",
-								color: "#E10098",
-							},
-							{
-								logo: hasuraPNG,
-								name: "Hasura",
-								color: "#1EB4D4",
-							},
-							{
 								logo: nodeJSPNG,
 								name: "NodeJS",
 								color: "#3c873a",
+								url: "https://nodejs.org/en/about",
+								subtitle: "A JS-Engine",
 							},
 							{
 								logo: reactPNG,
 								name: "React-Native",
 								color: "#61DBFB",
+								url: "https://reactnative.dev/",
+								subtitle: "Framework to build apps",
 							},
 							{
 								logo: typescriptPNG,
 								name: "Typescript",
 								color: "#3178C6",
+								url: "https://www.typescriptlang.org/",
+								subtitle: "Best programing language"
+							},
+							{
+								logo: firebasePNG,
+								name: "Firebase",
+								color: "#FFA000",
+								url: "https://firebase.google.com/",
+								subtitle: "A cloud infrastructure",
+							},
+							{
+								logo: graphqlPNG,
+								name: "GraphQL",
+								color: "#E10098",
+								url: "https://graphql.org/",
+								subtitle: "A graph query language",
+							},
+							{
+								logo: hasuraPNG,
+								name: "Hasura",
+								color: "#1EB4D4",
+								url: "https://hasura.io/",
+								subtitle: "To build a Graphql API",
 							},
 						]
 					)
@@ -81,31 +92,43 @@ export default function Skills() {
 										logo: postgrePNG,
 										name: "postgreSQL",
 										color: "#336791",
+										url: "https://www.postgresql.org/",
+										subtitle: "A relational Database",
 									},
 									{
 										logo: stripePNG,
 										name: "Stripe",
 										color: "#5433FF",
+										url: "https://stripe.com/",
+										subtitle: "Payment management",
 									},
 									{
-										logo: pdfPNG,
+										logo: pdfIcon,
 										name: "PdfKit",
 										color: "red",
+										url: "https://pdfkit.org/",
+										subtitle: "PDF generation (used for invoice)"
 									},
 									{
-										logo: rxjsPNG,
-										name: "RxJS",
-										color: "rgb(241, 0, 144)",
+										logo: apolloPNG,
+										name: "Apollo Client",
+										color: "#6830E9",
+										url: "https://www.apollographql.com/",
+										subtitle: "A Graphql query client"
 									},
 									{
 										logo: puppeteerPNG,
 										name: "Puppeteer",
 										color: "rgb(1, 209, 157)",
+										url: "https://pptr.dev/",
+										subtitle: "Control browser (used for SSO)"
 									},
 									{
 										logo: ethereumPNG,
-										name: "Solidity",
-										color: "grey",
+										name: "Ether.js",
+										color: "lightgrey",
+										url: "https://ethereum.org/",
+										subtitle: "For crypto-currencies"
 									},
 								]
 							)
@@ -129,12 +152,12 @@ export default function Skills() {
 									paddingVertical: 10,
 									fontSize: 18,
 								}}>
-									{
-										selectText({
-											en: "Show more",
-											fr: "Voir plus",
-										})
-									}
+								{
+									selectText({
+										en: "Show more",
+										fr: "Voir plus",
+									})
+								}
 							</AppText>
 						</Pressable>
 
@@ -148,14 +171,25 @@ const mapToTechRows = (techs: Tech[]) => techs.map((tech, index) => <TechRow key
 
 function TechRow({ tech }: { tech: Tech }) {
 	return (
-		<View style={{ flexBasis: 200, flexGrow: 1, flexDirection: "row", alignItems: "center" }}>
-			<Image source={{ uri: tech.logo }}
+		<a href={tech.url} target="_blank" className="view"
+
+			style={{ flexBasis: 200, flexGrow: 1, flexDirection: "row", alignItems: "center", textDecoration: "none" }}>
+
+			<Image
+				source={{ uri: tech.logo }}
 				resizeMode="contain"
-				style={{ width: 50, height: 50, margin: 20 }} />
-			<AppText style={{ fontSize: 18, letterSpacing: 1.1, color: tech.color, fontWeight: "bold" }}>
-				{tech.name}
-			</AppText>
-		</View>
+				style={{ width: 50, height: 50, margin: 20, borderRadius: 5 }} />
+
+			<View style={{ flex: 1 }}>
+				<AppText style={{ fontSize: 18, color: tech.color, fontWeight: "bold", marginBottom: 5 }}>
+					{tech.name}
+				</AppText>
+
+				<AppText style={{ fontSize: 12, letterSpacing: .9, color: "white" }}>
+					{tech.subtitle}
+				</AppText>
+			</View>
+		</a>
 	);
 }
 
@@ -163,4 +197,6 @@ interface Tech {
 	logo: string;
 	name: string;
 	color: string;
+	url: string,
+	subtitle: string,
 }
