@@ -4,6 +4,7 @@ import { getApp } from "firebase/app"
 import { getMessaging, getToken, isSupported } from "firebase/messaging"
 import { useEffect, useState } from "react";
 import AppText from "../../component/Text";
+import api from "../../api";
 
 
 export default function NotifyMeButton({ ...props }: PressableProps) {
@@ -13,7 +14,7 @@ export default function NotifyMeButton({ ...props }: PressableProps) {
 	}, []);
 
 	const selectText = useSelectText();
-	props.onPress = toggleSubscription;
+	props.onPress = subscribe;
 	// @ts-ignore
 	props.style = StyleSheet.compose(styles.container, props.style);
 
@@ -34,14 +35,14 @@ export default function NotifyMeButton({ ...props }: PressableProps) {
 }
 
 
-function toggleSubscription() {
+async function subscribe() {
 	const messaging = getMessaging(getApp());
 
-	getToken(messaging, {
+	const token = await getToken(messaging, {
 		vapidKey: "BJV89gRYMKj7qUPy72WA0aIq_AihixKO0rrzXf3-Z-vnidlPdFYvGXGtQ9_gXWHCQjPj4A9Fgwyro020kwEudbI",
-	})
-		.then(console.log)
-		.catch(error => console.error(error.message));
+	});
+
+	await api.subscribeToNotifications.mutate({ token });
 }
 
 const GRADIENT_BACKGROUND = (
