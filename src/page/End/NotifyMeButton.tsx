@@ -1,7 +1,7 @@
 import { Pressable, PressableProps, StyleSheet, Text, View, ViewProps, ViewStyle } from "react-native";
 import { useSelectText } from "../../hook/useLang";
 import { getApp } from "firebase/app"
-import { getMessaging, getToken, isSupported, } from "firebase/messaging"
+import { getMessaging, getToken, isSupported } from "firebase/messaging"
 import { useEffect, useState } from "react";
 import AppText from "../../component/Text";
 
@@ -36,18 +36,21 @@ export default function NotifyMeButton({ ...props }: PressableProps) {
 
 function toggleSubscription() {
 	const messaging = getMessaging(getApp());
+
 	getToken(messaging, {
 		vapidKey: "BJV89gRYMKj7qUPy72WA0aIq_AihixKO0rrzXf3-Z-vnidlPdFYvGXGtQ9_gXWHCQjPj4A9Fgwyro020kwEudbI",
 	})
-	.then(console.log)
+		.then(console.log)
 		.catch(error => console.error(error.message));
 }
 
-const GRADIENT_BACKGROUND = <div style={{
-	zIndex: 0,
-	position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
-	backgroundImage: "linear-gradient(21deg, rgba(231,17,17,1) 0%, rgba(231,144,17,1) 81%)",
-}} />
+const GRADIENT_BACKGROUND = (
+	<div style={{
+		zIndex: 0,
+		position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
+		backgroundImage: "linear-gradient(21deg, rgba(231,17,17,1) 0%, rgba(231,144,17,1) 81%)",
+	}} />
+);
 
 const styles = StyleSheet.create({
 	container: {
