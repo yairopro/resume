@@ -84,7 +84,9 @@ export default function OpenSources() {
 				}
 			</AppText>
 
-			<View style={{ gap: 20, flexDirection: "row", flexWrap: "wrap", flexGrow: 1, alignContent: "space-around" }}>
+			<View style={{ 
+				// @ts-ignore
+				gap: 20, flexDirection: "row", flexWrap: "wrap", flexGrow: 1, alignContent: "space-around" }}>
 				{
 					COLABORATIONS.map(({ icon, title, description, stars, link }) =>
 						<a href={link} target="_blank" className="view"
@@ -98,13 +100,17 @@ export default function OpenSources() {
 
 							<View style={{
 								flexDirection: "row",
+								
+								// @ts-ignore
 								gap: 10,
 							}}>
 								<AppText style={{ fontSize: 40 }}>
 									{icon}
 								</AppText>
 
-								<View style={{ gap: 5, flex: 1 }}>
+								<View style={{ 
+									// @ts-ignore
+									gap: 5, flex: 1 }}>
 									<AppText style={{ fontWeight: 'bold', fontSize: 14 }}>
 										{title}
 									</AppText>

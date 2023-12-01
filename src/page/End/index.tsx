@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import Card from "../../component/Card";
 import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
-import NotifyMeButton from "./NotifyMeButton";
+// import NotifyMeButton from "./NotifyMeButton";
 import timeBackgroundPicture from "./time-background.jpeg";
 
 export default function End() {

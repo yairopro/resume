@@ -18,10 +18,12 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
+		"rootDir": "src",
+		"skipDefaultLibCheck": true,
 		"paths": {
-			"@backend": [
-				"./functions/src/index.ts"
-			]
+			// "@backend": [
+			// 	"./functions/src/index.ts"
+			// ]
 		},
 		"jsx": "react-jsx"
 	},
