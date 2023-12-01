@@ -4,7 +4,6 @@ import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
 import NotifyMeButton from "./NotifyMeButton";
 import timeBackgroundPicture from "./time-background.jpeg";
-// import NotifyMeButton from "./NotifyMeButton"
 
 export default function End() {
 	// {// refresh each second
@@ -113,7 +112,7 @@ export default function End() {
 					</AppText> */}
 
 
-					{/* <NotifyMeButton style={styles.notifyMe} /> */}
+					<NotifyMeButton style={styles.notifyMe} />
 				</View>
 			</ImageBackground>
 		</Card>

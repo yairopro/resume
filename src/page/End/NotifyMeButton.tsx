@@ -1,10 +1,10 @@
-import { Pressable, PressableProps, StyleSheet, Text, View, ViewProps, ViewStyle } from "react-native";
-import { useSelectText } from "../../hook/useLang";
-import { getApp } from "firebase/app"
-import { getMessaging, getToken, isSupported } from "firebase/messaging"
+import { getApp } from "firebase/app";
+import { getMessaging, getToken, isSupported } from "firebase/messaging";
 import { useEffect, useState } from "react";
-import AppText from "../../component/Text";
+import { Pressable, PressableProps, StyleSheet } from "react-native";
 import api from "../../api";
+import AppText from "../../component/Text";
+import { useSelectText } from "../../hook/useLang";
 
 
 export default function NotifyMeButton({ ...props }: PressableProps) {
@@ -14,7 +14,15 @@ export default function NotifyMeButton({ ...props }: PressableProps) {
 	}, []);
 
 	const selectText = useSelectText();
-	props.onPress = subscribe;
+
+	const [subscription, setSubscribing] = useState<"sending" | "done">();
+	if (!subscription)
+		props.onPress = () => {
+			setSubscribing("sending");
+			subscribe()
+				.then(() => setSubscribing("done"))
+				.catch(() => setSubscribing(undefined))
+		};
 	// @ts-ignore
 	props.style = StyleSheet.compose(styles.container, props.style);
 
@@ -24,10 +32,12 @@ export default function NotifyMeButton({ ...props }: PressableProps) {
 
 			<AppText style={styles.text}>
 				{
-					selectText({
-						en: "Notify me on updates",
-						fr: "Me notifier des changements",
-					})
+					subscription == "sending" ? `Subscribing...`
+						: subscription == "done" ? `✨ Subscribed`
+							: selectText({
+								en: "Notify me on updates",
+								fr: "Me notifier des changements",
+							})
 				}
 			</AppText>
 		</Pressable>

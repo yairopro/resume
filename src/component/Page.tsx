@@ -11,5 +11,5 @@ export const cardStyle: ViewStyle = {
 	minHeight: "100svh",
 	paddingVertical: 20,
 	// @ts-ignore
-	"scroll-snap-align": "center",
+	// "scroll-snap-align": "center",
 };
