@@ -34,7 +34,7 @@ function App() {
 						Profile,
 						Story,
 						Skills,
-						// OpenSources,
+						OpenSources,
 						SideProject,
 						End,
 					].map((Content, index) =>

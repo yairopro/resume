@@ -17,4 +17,4 @@ const subscribeToNotifications = trpc.procedure
 export default subscribeToNotifications;
 
 // -----
-export const TOPIC = 'resume';
+export const TOPIC = 'open';

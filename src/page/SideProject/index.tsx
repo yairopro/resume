@@ -4,6 +4,7 @@ import AppText from "../../component/Text";
 import { useSelectText } from "../../hook/useLang";
 import cryptocurrenciesPicture from "./cryptocurrencies.jpeg"
 
+// TODO Erised + ipronostic
 export default function SideProject() {
 	const selectText = useSelectText();
 	return (

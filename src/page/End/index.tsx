@@ -111,8 +111,8 @@ export default function End() {
 						}
 					</AppText> */}
 
-
-					<NotifyMeButton style={styles.notifyMe} />
+					{/* // TODO finish to watch https://www.youtube.com/playlist?list=PLGVwFLT24VFq3ZTcakcpByFhe1ex1BPuN */}
+					{/* <NotifyMeButton style={styles.notifyMe} /> */}
 				</View>
 			</ImageBackground>
 		</Card>
