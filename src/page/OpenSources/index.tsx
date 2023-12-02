@@ -13,7 +13,7 @@ export default function OpenSources() {
 			title: "React-native Maps",
 			description: selectText({
 				en: "A react-native library to display geographic maps.",
-				fr: "Librairie react-native pour afficher des cartes geographiques.",
+				fr: "Une librairie react-native pour afficher des cartes geographiques.",
 			}),
 			stars: "14.5k",
 			link: "https://github.com/react-native-maps/react-native-maps",
@@ -22,8 +22,8 @@ export default function OpenSources() {
 			icon: "🧭",
 			title: "React-native Geocoding",
 			description: selectText({
-				en: "React-native library to convert an address into a geolocation.",
-				fr: "Librairie react-native convertir une adresse en geolocalisation.",
+				en: "A React-native library to convert an address into a geolocation.",
+				fr: "Une librairie react-native convertir une adresse en geolocalisation.",
 			}),
 			stars: 200,
 			link: "https://github.com/marlove/react-native-geocoding",
@@ -33,7 +33,7 @@ export default function OpenSources() {
 			title: "React-native Reanimated",
 			description: selectText({
 				en: "A react-native library to create smooth animations.",
-				fr: "Librairie react-native pour creer des animations fluides.",
+				fr: "Une librairie react-native pour creer des animations fluides.",
 			}),
 			stars: "8k",
 			link: "https://github.com/software-mansion/react-native-reanimated",
@@ -42,7 +42,7 @@ export default function OpenSources() {
 			icon: "❄️",
 			title: "Graph-fs",
 			description: selectText({
-				en: "A node module allowing to browse files as a graph.",
+				en: "A node module allowing to browse files intuitively as a graph.",
 				fr: "Un module permettant de parcourir les fichiers comme un graph.",
 			}),
 			stars: "(Owner)",
@@ -52,8 +52,8 @@ export default function OpenSources() {
 			icon: "⚛️",
 			title: "Vector Icons",
 			description: selectText({
-				en: "A react-native library of containing thousands of icons.",
-				fr: "Librairie react-native contenant des milliers d'icones.",
+				en: "A react-native library containing thousands of icons.",
+				fr: "Une librairie react-native contenant des milliers d'icones.",
 			}),
 			stars: "17k",
 			link: "https://github.com/oblador/react-native-vector-icons",
@@ -62,7 +62,7 @@ export default function OpenSources() {
 			icon: "🧑🏻‍🚀",
 			title: selectText({ en: "This Resume", fr: "Ce CV" }),
 			description: selectText({
-				en: "Using React, Firebase, Typescript and Three.js for the 3D animation",
+				en: "It relies on React, Firebase, Typescript and Three.js for the 3D animation behind.",
 				fr: "Utilisant React, Firebase, Typescript et Three.js pour l'animation 3D",
 			}),
 			stars: "(Owner)",
@@ -71,22 +71,25 @@ export default function OpenSources() {
 	] as const;
 
 	return (
-		<Card>
+		<Card style={{padding: 30}}>
 			<AppText style={{ fontSize: 25, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 20, textAlign: 'center' }}>
 				Open-sources
 			</AppText>
-			<AppText style={{ marginBottom: 20, fontSize: 17, textAlign: 'center' }}>
+
+			<AppText style={{ marginBottom: 50, fontSize: 17, textAlign: 'center' }}>
 				{
 					selectText({
-						en: "Here are some of my collaboration to the open-source community",
-						fr: "Voici quelques unes de mes colaborations aux projets open-sources"
+						en: "Here are some open-source projects I own or collaborated",
+						fr: "Voici quelques projets open-source auxquels j'ai collaboré ou que je possède"
 					})
 				}
 			</AppText>
 
-			<View style={{ 
+			<View style={{
 				// @ts-ignore
-				gap: 20, flexDirection: "row", flexWrap: "wrap", flexGrow: 1, alignContent: "space-around" }}>
+				gap: 40, flexDirection: "row", flexWrap: "wrap", flexGrow: 1, alignContent: "space-around",
+				justifyContent: "space-between",
+			}}>
 				{
 					COLABORATIONS.map(({ icon, title, description, stars, link }) =>
 						<a href={link} target="_blank" className="view"
@@ -94,13 +97,12 @@ export default function OpenSources() {
 								textDecoration: "none",
 								flexGrow: 1,
 								flexBasis: 200,
-								margin: "30px 0",
 							}}
 						>
 
 							<View style={{
 								flexDirection: "row",
-								
+
 								// @ts-ignore
 								gap: 10,
 							}}>
@@ -108,9 +110,10 @@ export default function OpenSources() {
 									{icon}
 								</AppText>
 
-								<View style={{ 
+								<View style={{
 									// @ts-ignore
-									gap: 5, flex: 1 }}>
+									gap: 5, flex: 1
+								}}>
 									<AppText style={{ fontWeight: 'bold', fontSize: 14 }}>
 										{title}
 									</AppText>
