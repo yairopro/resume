@@ -65,7 +65,7 @@ export default function End() {
 							{
 								[
 									['mailto:', 'yairopro@gmail.com'],
-									['tel:', '+972532724254'],
+									['tel:', '+972-53-272-4254'],
 								]
 									.map(([prefix, contact]) =>
 										<AppText
@@ -84,6 +84,8 @@ export default function End() {
 												fontWeight: "bold",
 												flexBasis: 150,
 												padding: 5,
+												paddingVertical: 20,
+												flexGrow: 1,
 											}}>
 											{contact}
 										</AppText>

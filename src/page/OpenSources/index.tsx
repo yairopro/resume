@@ -16,7 +16,7 @@ export default function OpenSources() {
 				fr: "Une librairie react-native pour afficher des cartes geographiques.",
 			}),
 			stars: "14.5k",
-			link: "https://github.com/react-native-maps/react-native-maps",
+			link: "https://www.npmjs.com/package/react-native-maps",
 		},
 		{
 			icon: "🧭",
@@ -26,7 +26,7 @@ export default function OpenSources() {
 				fr: "Une librairie react-native convertir une adresse en geolocalisation.",
 			}),
 			stars: 200,
-			link: "https://github.com/marlove/react-native-geocoding",
+			link: "https://www.npmjs.com/package/react-native-geocoding",
 		},
 		{
 			icon: "🎠",
@@ -36,17 +36,17 @@ export default function OpenSources() {
 				fr: "Une librairie react-native pour creer des animations fluides.",
 			}),
 			stars: "8k",
-			link: "https://github.com/software-mansion/react-native-reanimated",
+			link: "https://docs.swmansion.com/react-native-reanimated/",
 		},
 		{
 			icon: "❄️",
 			title: "Graph-fs",
 			description: selectText({
-				en: "A node module allowing to browse files intuitively as a graph.",
-				fr: "Un module permettant de parcourir les fichiers comme un graph.",
+				en: "A node module allowing to browse files intuitively as a graph. Leave me a star ⭐️.",
+				fr: "Un module permettant de parcourir les fichiers comme un graph. Mettez moi une étoile ⭐️.",
 			}),
 			stars: "(Owner)",
-			link: "https://github.com/yairopro/graph-fs",
+			link: "https://www.npmjs.com/package/graph-fs",
 		},
 		{
 			icon: "⚛️",
@@ -56,7 +56,7 @@ export default function OpenSources() {
 				fr: "Une librairie react-native contenant des milliers d'icones.",
 			}),
 			stars: "17k",
-			link: "https://github.com/oblador/react-native-vector-icons",
+			link: "https://oblador.github.io/react-native-vector-icons/",
 		},
 		{
 			icon: "🧑🏻‍🚀",
@@ -71,7 +71,7 @@ export default function OpenSources() {
 	] as const;
 
 	return (
-		<Card style={{padding: 30}}>
+		<Card style={{ padding: 30 }}>
 			<AppText style={{ fontSize: 25, letterSpacing: 1.1, fontWeight: "bold", marginBottom: 20, textAlign: 'center' }}>
 				Open-sources
 			</AppText>
@@ -79,8 +79,8 @@ export default function OpenSources() {
 			<AppText style={{ marginBottom: 50, fontSize: 17, textAlign: 'center' }}>
 				{
 					selectText({
-						en: "Here are some open-source projects I own or collaborated",
-						fr: "Voici quelques projets open-source auxquels j'ai collaboré ou que je possède"
+						en: "I participate to open-source libraries when needed. Here are some open-source projects I own or collaborated",
+						fr: "Je participe à des bibliothèques open-sources lorsque nécessaire. Voici quelques projets open-source auxquels j'ai collaboré ou que je possède"
 					})
 				}
 			</AppText>

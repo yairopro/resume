@@ -1,11 +1,11 @@
 import { StyleSheet, View, ViewProps, ViewStyle } from "react-native";
 
 export default function Card({...props}: ViewProps) {
-	props.style = StyleSheet.compose(cardStyle, props.style);
+	props.style = StyleSheet.compose<ViewStyle>(cardStyle, props.style);
 	return <View {...props}/>;
 }
 
-export const cardStyle: ViewStyle = {
+export const cardStyle = {
 	backgroundColor: "rgba(0, 0, 0, 0.8)",
 	borderWidth: 1.5,
 	borderColor: "#505050",
@@ -19,4 +19,4 @@ export const cardStyle: ViewStyle = {
 	padding: 20,
 	shadowRadius: 10,
 	shadowOpacity: .4,
-};
+} satisfies ViewStyle;
