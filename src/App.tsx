@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import { ScrollView, View } from "react-native";
-import Page from './component/Page';
+import { View } from "react-native";
 import LangSelector from './component/LangSelector';
-import { Lang, langs, LanguageContext } from './hook/useLang';
+import Page from './component/Page';
+import ScrollDownIndicator from './component/ScrollDownIndicator';
+import { Lang, LanguageContext, langs } from './hook/useLang';
 import End from './page/End';
+import OpenSources from './page/OpenSources';
 import Profile from './page/Profile';
 import SideProject from './page/SideProject';
 import Skills from './page/Skills';
 import Story from './page/Story';
-import AppText from './component/Text';
-import ScrollDownIndicator from './component/ScrollDownIndicator';
-import OpenSources from './page/OpenSources';
 
 function App() {
 	useEffect(() => {

@@ -95,7 +95,7 @@ const animate = (ms) => {
 	requestAnimationFrame(animate);
 
 	const axis = landscape ? 'y' : 'x';
-	starMesh.rotation[axis] += 0.001;
+	starMesh.rotation[axis] += 0.0005;
 
 	circles.forEach((circle, i) => {
 		circle.rotation.y = (ms / 1000) + 0.3 * (i + 1) * (i % 2 === 0 ? 1 : -1);
