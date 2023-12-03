@@ -34,8 +34,8 @@ function App() {
 						Profile,
 						Story,
 						Skills,
-						OpenSources,
 						SideProject,
+						OpenSources,
 						End,
 					].map((Content, index) =>
 						<Page key={index}>

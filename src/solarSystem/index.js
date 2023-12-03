@@ -90,10 +90,10 @@ window.addEventListener(
 );
 
 //animation loop
+const landscape = window.innerWidth > window.innerHeight;
 const animate = (ms) => {
 	requestAnimationFrame(animate);
 
-	const landscape = window.innerWidth > window.innerHeight;
 	const axis = landscape ? 'y' : 'x';
 	starMesh.rotation[axis] += 0.001;
 
