@@ -31,7 +31,7 @@ export default function Profile() {
 			</AppText>
 
 			<AppText style={styles.subtitle}>
-				Senior Fullstack Developer
+				Senior Full-stack Developer
 			</AppText>
 
 			<View style={styles.iconsRow}>
