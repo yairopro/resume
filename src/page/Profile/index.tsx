@@ -95,9 +95,11 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		bottom: 0,
 		left: 0,
+		right: 0,
 		flexDirection: "row",
 		padding: 10,
 		gap: 10,
+		justifyContent: "center",
 	},
 
 	icon: {
