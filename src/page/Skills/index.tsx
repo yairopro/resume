@@ -121,7 +121,7 @@ export default function Skills() {
 										name: "Puppeteer",
 										color: "rgb(1, 209, 157)",
 										url: "https://pptr.dev/",
-										subtitle: "Control browser (used for SSO)"
+										subtitle: "Control Browser to prerender (used for SEO)"
 									},
 									{
 										logo: ethereumPNG,
