@@ -29,7 +29,7 @@ export default function Story() {
 								+ `\n\nThe project included 2 mobile applications (each on iOS and Android), 4 websites and multiples microservices.`,
 
 							fr: `De 2015 à 2022, j'ai fait partie d'une équipe dans une startup appelée Shopinzon. Son objectif est de réunir les commerçants locaux, ainsi que leurs articles et services, dans une marketplace centralisée.`
-								+ `\n\nTout au long de cette aventure, mon équipe et moi avons utilisé les derniers technologies tels que React-Native, Firebase et Hasura.`
+								+ `\n\nTout au long de cette aventure, mon équipe et moi avons utilisé les dernieres technologies tels que React-Native, Firebase et Hasura.`
 								+ `\n\nLe projet comprenait 2 applications mobiles (iOS et Android chacune), 4 sites web et une multitude de micro services.`
 						})
 					}
